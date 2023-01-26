@@ -1,6 +1,6 @@
 function letterCombinations(input_digit) {
   //Complete the function
-    if(input_digits == ""){
+    if(input_digit == ""){
         return [];
     }
     let table = [ '0','1','abc','def','ghi','jkl','mno','pqrs','tuv','wxyz'];
@@ -12,10 +12,10 @@ function letterCombinations(input_digit) {
         let str = que[0];
         que.shift();
          
-        if(str.length == input_digits.length){
+        if(str.length == input_digit.length){
             res.push(str);
         } else{
-            let s= Number(input_digits.charAt(str.length));
+            let s= Number(input_digit.charAt(str.length));
             let val = table[s];
              
             for(i=0;i<val.length;i++){
